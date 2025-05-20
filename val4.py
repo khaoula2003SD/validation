@@ -12,6 +12,18 @@ st.set_page_config(page_title="Analyse Exactitude & Incertitude", layout="wide")
 # --- Titre principal ---
 st.title("🔬 Analyse d'Exactitude & d'Incertitude")
 st.markdown("Cette application permet de téléverser plusieurs fichiers CSV correspondant à différents éléments, puis d’analyser l’exactitude et l’incertitude de leurs mesures.")
+# --- Explication contextuelle ---
+with st.expander("ℹ️ Qu'est-ce que la validation analytique ?", expanded=True):
+    st.markdown("""
+    La **validation analytique** permet de s'assurer qu'une méthode de mesure produit des résultats fiables, reproductibles et acceptables pour son usage prévu.
+
+    Dans ce cadre :
+    - L’**exactitude** mesure l’écart entre la valeur mesurée et la valeur de référence.
+    - L’**incertitude** évalue la dispersion des résultats autour de cette valeur.
+    
+    Cette application utilise plusieurs niveaux de concentration certifiée pour vérifier que les performances analytiques respectent les critères d’acceptabilité.
+    """)
+
 
 # --- Upload multiples fichiers ---
 uploaded_files = st.file_uploader("📂 Téléversez les fichiers CSV pour chaque élément :", type="csv", accept_multiple_files=True)
