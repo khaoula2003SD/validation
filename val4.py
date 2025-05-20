@@ -139,6 +139,4 @@ plot_exactitude(resultats, nom_element=nom_element)
 st.markdown("### 📈 Plan d’incertitude")
 plot_incertitude(resultats, nom_element=nom_element)
 
-# --- Résumé tabulaire ---
-st.markdown("### 📋 Résumé des résultats")
-st.dataframe(pd.DataFrame(resultats).T)
+
